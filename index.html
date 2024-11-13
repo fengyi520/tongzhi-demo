@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>通知车主挪车</title>
+<style>
+          * { box-sizing: border-box; margin: 0; padding: 0; }
+          body { font-family: Arial, sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; background: #f0f2f5; color: #333; }
+          .container { text-align: center; padding: 20px; width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); background: #fff; }
+          h1 { font-size: 24px; margin-bottom: 20px; color: #007bff; }
+          p { margin-bottom: 20px; font-size: 16px; color: #555; }
+          button { 
+            width: 100%; 
+            padding: 15px; 
+            margin: 10px 0; 
+            font-size: 18px; 
+            font-weight: bold; 
+            color: #fff; 
+            border: none; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            transition: background 0.3s; 
+          }
+          .notify-btn { background: #28a745; }
+          .notify-btn:hover { background: #218838; }
+          .call-btn { background: #17a2b8; }
+          .call-btn:hover { background: #138496; }
+        </style>
+</head>
+<body>
+<div class="container">
+        <h1>通知车主挪车</h1>
+        <p>如需通知车主，请点击以下按钮</p>
+        <button class="notify-btn" onclick="notifyOwner()">通知车主挪车</button>
+        <button class="call-btn" onclick="callOwner()">拨打车主电话</button>
+<script>
+function notifyOwner(){fetch("\x68\x74\x74\x70\x73\x3a\x2f\x2f\x77\x78\x70\x75\x73\x68\x65\x72\x2e\x7a\x6a\x69\x65\x63\x6f\x64\x65\x2e\x63\x6f\x6d\x2f\x61\x70\x69\x2f\x73\x65\x6e\x64\x2f\x6d\x65\x73\x73\x61\x67\x65",{method:"\x50\x4f\x53\x54",headers:{"\x43\x6f\x6e\x74\x65\x6e\x74\x2d\x54\x79\x70\x65":"\x61\x70\x70\x6c\x69\x63\x61\x74\x69\x6f\x6e\x2f\x6a\x73\x6f\x6e"},body:JSON['\x73\x74\x72\x69\x6e\x67\x69\x66\x79']({appToken:"\x41\x54\x5f\x58\x70\x57\x41\x42\x4b\x46\x31\x48\x4d\x44\x75\x56\x53\x76\x42\x53\x64\x6d\x44\x4e\x55\x45\x4b\x46\x46\x54\x34\x35\x64\x39\x6e",content:"\u60a8\u597d\uff0c\u6709\u4eba\u9700\u8981\u60a8\u632a\u8f66\uff0c\u8bf7\u53ca\u65f6\u5904\u7406\u3002",contentType:1,uids:["\x55\x49\x44\x5f\x69\x59\x53\x35\x35\x6c\x43\x4d\x39\x32\x79\x71\x66\x6f\x58\x66\x41\x6f\x59\x77\x59\x6d\x42\x79\x7a\x59\x45\x4a","\x55\x49\x44\x5f\x52\x68\x2a\x2a\x2a\x2a\x2a\x2a\x2a\x2a\x2a\x42\x35\x51\x4b"]})})['\x74\x68\x65\x6e'](response=>response['\x6a\x73\x6f\x6e']())['\x74\x68\x65\x6e'](data=>{if(data['\x63\x6f\x64\x65']===1000){window["\x61\x6c\x65\x72\x74"]("\u901a\u77e5\u5df2\u53d1\u9001\uff01")}else{window["\x61\x6c\x65\x72\x74"]("\u901a\u77e5\u53d1\u9001\u5931\u8d25\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5\u3002")}})['\x63\x61\x74\x63\x68'](error=>{console['\x65\x72\x72\x6f\x72']("\x45\x72\x72\x6f\x72 \x73\x65\x6e\x64\x69\x6e\x67 \x6e\x6f\x74\x69\x66\x69\x63\x61\x74\x69\x6f\x6e\x3a",error);window["\x61\x6c\x65\x72\x74"]("\u901a\u77e5\u53d1\u9001\u51fa\u9519\uff0c\u8bf7\u68c0\u67e5\u7f51\u7edc\u8fde\u63a5\u3002")})}function callOwner(){window['\x6c\x6f\x63\x61\x74\x69\x6f\x6e']['\x68\x72\x65\x66']="\x74\x65\x6c\x3a\x31\x33\x31\x38\x38\x38\x38\x38\x38\x38"}
+</script>
+</body></html>
